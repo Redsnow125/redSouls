@@ -16,7 +16,7 @@ app.get('/', (req,res) =>{
 
 
 
-app.get('/ds1', (req,res) =>{
+app.get('/ds1/', (req,res) =>{
     res.status(200).sendFile(path.join(__dirname, '../public/ds1.html'))
 })
 
