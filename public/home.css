@@ -1,0 +1,28 @@
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 50px;
+    padding-right: 50px;
+    background-color: maroon;
+    color: antiquewhite;
+}
+nav{
+    display: flex;
+    gap: 20px;
+}
+
+a{
+    color: antiquewhite;
+    text-decoration: none;
+}
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(77, 0, 0);
+}
+img{
+    width: 2000px;
+    height: 1000px;
+}
