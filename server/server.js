@@ -16,9 +16,9 @@ app.get('/', (req,res) =>{
 
 
 
-// app.get('/profile', (req,res) =>{
-//     res.status(200).sendFile(path.join(__dirname, '../public/profile.html'))
-// })
+app.get('/ds1', (req,res) =>{
+    res.status(200).sendFile(path.join(__dirname, '../public/ds1/ds1.html'))
+})
 
 
 
