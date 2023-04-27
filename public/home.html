@@ -4,13 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=\, initial-scale=1.0">
+    <link rel="stylesheet" href="./reset.css">
     <link rel="stylesheet" href="./home.css">
     <title>RedSouls</title>
 </head>
 <body>
     <header>
         <h1>
-            RedSouls
+            <img src="./images/ds1.png" alt="">
         </h1>
         <nav>
             <a href="">Dark Souls 1</a>
@@ -19,6 +20,27 @@
             <a href="">Elden Ring</a>
         </nav>
     </header>
+    <main>
+        <form><input type="text" placeholder="Boss name"><button id="search">Search</button></form>
+        <button id="rand">Random Boss</button>
+    </main>
+    <footer>
+        <h2 id = "bossName">Boss</h2>
+        <h3 id = "gameName">Game</h3>
+        <div id = "bossBox">
+            <section id="desc">
+                <p id="needed">Placeholder Main/side</p>
+                <p id="weak">Placeholder weakness</p>
+                <p id="resist">Placeholder ressitances</p>
+                <p id="immune">Placeholder immunities</p>
+                <p id="parry">Placeholder parryable</p>
+                <p id="dmg">Placeholder Damage</p>
+                <p id="health">Placeholder Health</p>
+                <p id="summs">Placeholder Summons</p>
+            </section>
+            <section id="pic"><img src="" alt="Boss Picture"></section>
+        </div>
+    </footer>
 
 
     <script src="home.js"></script>

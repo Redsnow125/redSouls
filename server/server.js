@@ -13,6 +13,9 @@ console.log(__dirname, '../public/home.html')
 app.get('/', (req,res) =>{
     res.status(200).sendFile(path.join(__dirname, '../public/home.html'))
 })
+
+
+
 // app.get('/profile', (req,res) =>{
 //     res.status(200).sendFile(path.join(__dirname, '../public/profile.html'))
 // })

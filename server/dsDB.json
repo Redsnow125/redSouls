@@ -1,0 +1,13 @@
+{
+    "id": 1,
+    "name": "Asylum Demon",
+    "weak": "physical",
+    "resist" : "none",
+    "immune" : "none",
+    "parry" : "no",
+    "dmg" : 50,
+    "health": 2000,
+    "summs": "none",
+    "require": "yes",
+    "image": "./ds1Pics/asylumdemon.jpg"
+}
