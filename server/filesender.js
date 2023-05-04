@@ -13,8 +13,8 @@ module.exports ={
     getds3 : (req,res) =>{
         res.status(200).sendFile(path.join(__dirname, '../public/ds3/ds3.html'))
     },
-    getelden : (req,res) =>{
-        res.status(200).sendFile(path.join(__dirname, '../public/elden/elden.html'))
+    getds4 : (req,res) =>{
+        res.status(200).sendFile(path.join(__dirname, '../public/ds4/ds4.html'))
     },
 
 }
