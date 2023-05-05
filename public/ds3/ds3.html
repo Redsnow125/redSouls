@@ -12,9 +12,15 @@
 </head>
 <body>
     <header>
+        <div id = "find barr">        
+            <form><input type="text" placeholder="Boss name" id="bossSearch"><button id="search">Search</button></form>
+            <button id="rand">Random Boss</button>
+            <button id="all">All Bosses</button>
+            <button id = 'Clear'>Clear</button>
+        </div>
         <h1>
             <a href="/">
-            <img src="../images/Ds3Logo.png" alt="" id="mainLink">
+            <img src="../images/Ds3Logo.png" alt="" id="mainLink" class="img">
             </a>
         </h1>
         <nav>
@@ -26,26 +32,11 @@
         </nav>
     </header>
     <main>
-        <form id="bossSearch"><input type="text" placeholder="Boss name"><button id="search">Search</button></form>
-        <button id="rand">Random Boss</button>
-    </main>
-    <footer>
-        <h2 id = "bossName">Boss</h2>
-        <h3 id = "gameName">Game</h3>
+        <h2 id = "bossName">Please enter a boss name or select random </h2>
         <div id = "bossBox">
-            <section id="desc">
-                <p id="needed">Placeholder Main/side</p>
-                <p id="weak">Placeholder weakness</p>
-                <p id="resist">Placeholder ressitances</p>
-                <p id="immune">Placeholder immunities</p>
-                <p id="parry">Placeholder parryable</p>
-                <p id="dmg">Placeholder Damage</p>
-                <p id="health">Placeholder Health</p>
-                <p id="summs">Placeholder Summons</p>
-            </section>
-            <section id="pic"><img src="" alt="Boss Picture"></section>
         </div>
-    </footer>
+
+    </main>
 
 
     <script src="home.js"></script>

@@ -1,9 +1,10 @@
-footer{
+main{
     padding: 10px;
     display: flex;
     flex-direction: column;
-    height: 90vh;
-    /* background-color: aquamarine; */
     background-image: url("../images/ds3bg.jpg");
-    background-size: 100vw 100vh;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
 }
+
