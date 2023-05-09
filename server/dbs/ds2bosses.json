@@ -1,0 +1,66 @@
+[
+    {
+        "id": 1,
+        "name":    "Last Giant",
+        "weak":    "Dark, Heels, Left Arm",
+        "resist" : "fire, lightning",
+        "immune" : "none",
+        "parry" :  "no",
+        "dmg" :    "physical",
+        "health":  "2,530",
+        "summs":   "Mild-mannered Pate, Sellsword Luet",
+        "require": "yes",
+        "image":   "https://darksouls2.wiki.fextralife.com/file/Dark-Souls-2/the_last_giant.png"
+    },
+    {
+        "id": 2,
+        "name":    "Pursuer",
+        "weak":    "lighting, strike",
+        "resist" : "Dark",
+        "immune" : "Bleed",
+        "parry" :  "no",
+        "dmg" :    "physical, magic",
+        "health":  "3,110",
+        "summs":   "none",
+        "require": "no",
+        "image":   "https://darksouls2.wiki.fextralife.com/file/Dark-Souls-2/pursuer.png"
+    },{
+        "id": 3,
+        "name":    "Executioners Chariot",
+        "weak":    "lighting, fire, bleed",
+        "resist" : "Strike, Dark",
+        "immune" : "none",
+        "parry" :  "no",
+        "dmg" :    "physical, magic",
+        "health":  "4140",
+        "summs":   "none",
+        "require": "no",
+        "image":   "https://darksouls2.wiki.fextralife.com/file/Dark-Souls-2/executioners_chariot.png"
+    },
+    {
+        "id": 4,
+        "name":    "Looking Glass Knight",
+        "weak":    "Strike, Magic, Fire, Dark",
+        "resist" : "Lightning",
+        "immune" : "Bleed",
+        "parry" :  "no",
+        "dmg" :    "physical, lightning",
+        "health":  "6,540",
+        "summs":   "Benhart of Jugo, Ashen Knight Boyd",
+        "require": "yes",
+        "image":   "https://darksouls2.wiki.fextralife.com/file/Dark-Souls-2/looking_glass_knight.png"
+    },
+    {
+        "id": 5,
+        "name":    "The Skeleton Lords",
+        "weak":    "Strike, Fire",
+        "resist" : "Thrust, Magic",
+        "immune" : "Poison, Bleed",
+        "parry" :  "yes",
+        "dmg" :    "physical, fire, bleed",
+        "health":  "780 / 780 / 520",
+        "summs":   "Creighton of Mirrah",
+        "require": "yes",
+        "image":   "https://darksouls2.wiki.fextralife.com/file/Dark-Souls-2/the_skeleton_lords.png"
+    }
+]

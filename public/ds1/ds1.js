@@ -1,6 +1,6 @@
 const form = document.querySelector('form')
 const request = new XMLHttpRequest()
-let bossBox = document.querySelector('main')
+const bossBox = document.querySelector('main')
 const randBtn = document.querySelector("#rand")
 const clearBtn = document.querySelector("#Clear")
 const allBtn = document.querySelector("#all")
@@ -14,21 +14,21 @@ const searchBoss = evt =>{
     const bossInput = document.querySelector('#bossSearch')
     let input = bossInput.value
 
-    console.log(bossInput)
+    // console.log(bossInput)
     console.log(input)
+    
 
-    request.open('GET',`https://eldenring.fanapis.com/api/bosses?name=${input}?limit=150`,true)
+    request.open('GET',`/ds1/bosses/name/:${input}`,true)
     request.onload = function () {
         const bossList = JSON.parse(this.response)
         console.log('in onload')
         console.log(bossList)
-        let tempArr = bossList.data
-        console.log(tempArr)
+        let tempArr = bossList
         console.log(tempArr.length)
         bossBox.innerHTML = '';
         for(i = 0; i < tempArr.length; i++){
             let temp = tempArr[i]
-            createBossCard(temp.name,temp.description,temp.location,temp.region,temp.healthPoints,temp.image)
+            createBossCard(temp.name,temp.weak,temp.resist,temp.immune,temp.parry,temp.dmg,temp.health,temp.summs,temp.require,temp.image)
         }
     }
     
@@ -37,23 +37,14 @@ const searchBoss = evt =>{
 }
 
 const randBoss = evt =>{
-    console.log('in rand')
-    let randNum = Math.random()* 100
-    randNum = randNum.toFixed(0)
-
-    console.log(randNum)
-
-    request.open('GET',`https://eldenring.fanapis.com/api/bosses?limit=150`,true)
+    let randNum = Math.floor(Math.random()*5)
+    request.open('GET',`/ds1/randbosses`,true)
     request.onload = function () {
         const bossList = JSON.parse(this.response)
-        console.log('in onload')
-        // console.log(bossList)
-        let tempArr = bossList.data
-        // console.log(tempArr)
-        console.log(tempArr.length)
+        let tempArr = bossList
         bossBox.innerHTML = '';
             let temp = tempArr[randNum]
-            createBossCard(temp.name,temp.description,temp.location,temp.region,temp.healthPoints,temp.image)
+            createBossCard(temp.name,temp.weak,temp.resist,temp.immune,temp.parry,temp.dmg,temp.health,temp.summs,temp.require,temp.image)
         
     }
     
@@ -61,81 +52,67 @@ const randBoss = evt =>{
 }
 
 const allBoss = evt =>{
-    request.open('GET',`https://eldenring.fanapis.com/api/bosses?limit=150`,true)
+    request.open('GET',`/ds1/bosses`,true)
     request.onload = function () {
         const bossList = JSON.parse(this.response)
-        console.log('in onload')
-        console.log(bossList)
-        let tempArr = bossList.data
-        console.log(tempArr)
-        console.log(tempArr.length)
+        let tempArr = bossList
         bossBox.innerHTML = '';
         for(i = 0; i < tempArr.length; i++){
             let temp = tempArr[i]
-            createBossCard(temp.name,temp.description,temp.location,temp.region,temp.healthPoints,temp.image)
+            createBossCard(temp.name,temp.weak,temp.resist,temp.immune,temp.parry,temp.dmg,temp.health,temp.summs,temp.require,temp.image)
         }
     }
     
       request.send()
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-const createBossCard = (name,desc,location,region,health,img) =>{
-
+const createBossCard = (name,weak,resist,immune,parry,dmg,health,sums,require,image) =>{
 
     let container = document.createElement('section')
     let bossCard = document.createElement('aside')
     let bossPic = document.createElement('aside')
     let bossList = document.createElement('ul')
 
-
     let  nameP = document.createElement('p');
-    let  descP = document.createElement('p');
-    let  locationP = document.createElement('p');
-    let  regionP = document.createElement('p');
+    let  weakP = document.createElement('p');
+    let  resistP = document.createElement('p');
+    let  immuneP = document.createElement('p');
+    let  parryP = document.createElement('p');
+    let  dmgP = document.createElement('p');
     let  healthP = document.createElement('p');
-    // console.log(img)
-    bossPic.innerHTML = `<img src="${img}" alt="Boss Picture" style="width: 800px; height: 500px;">`
+    let  sumsP = document.createElement('p');
+    let  requireP = document.createElement('p');
+
+    bossPic.innerHTML = `<img src="${image}" alt="Boss Picture" style="width: 800px; height: 500px;">`
     
     nameP.textContent = name;
     bossCard.appendChild(nameP)
-    console.log(bossCard)
 
-    descP.textContent = desc;
-    bossCard.appendChild(descP)
-    // console.log(info)
+    weakP.textContent = weak;
+    bossCard.appendChild(weakP)
 
-    locationP.textContent = location;
-    bossCard.appendChild(locationP)
-    // console.log(info)
+    resistP.textContent = resist;
+    bossCard.appendChild(resistP)
 
-    regionP.textContent = region;
-    bossCard.appendChild(regionP)
-    // console.log(info)
+    immuneP.textContent = immune;
+    bossCard.appendChild(immuneP)
 
+    parryP.textContent = parry;
+    bossCard.appendChild(parryP)
+    
+    dmgP.textContent = dmg;
+    bossCard.appendChild(dmgP)
+    
     healthP.textContent = health;
     bossCard.appendChild(healthP)
+    
+    sumsP.textContent = sums;
+    bossCard.appendChild(sumsP)
+    
+    requireP.textContent = require;
+    bossCard.appendChild(requireP)
 
     bossList.appendChild(bossCard)
-
     container.appendChild(bossList)
     container.appendChild(bossPic)
     bossBox.appendChild(container)

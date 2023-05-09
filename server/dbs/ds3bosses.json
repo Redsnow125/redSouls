@@ -1,0 +1,66 @@
+[
+    {
+        "id": 1,
+        "name":    "Ludex Gundyr",
+        "weak":    "Frost, Lightning, Fire",
+        "resist" : "Dark, Bleed",
+        "immune" : "Poison",
+        "parry" :  "Yes",
+        "dmg" :    "physical",
+        "health":  "1037",
+        "summs":   "none",
+        "require": "yes",
+        "image":   "https://darksouls3.wiki.fextralife.com/file/Dark-Souls-3/iudex-gundyr-enemies-dark-souls-3-wiki-guide1.jpg"
+    },
+    {
+        "id": 2,
+        "name":    "Vordt Of The Boreal Valley",
+        "weak":    "Fire, Dark",
+        "resist" : "Slash, Thrust",
+        "immune" : "Poison, Toxic, Bleed, Frost",
+        "parry" :  "no",
+        "dmg" :    "physical, frost",
+        "health":  "1328",
+        "summs":   "Sword Master, Lion Knight Albert",
+        "require": "yes",
+        "image":   "https://darksouls3.wiki.fextralife.com/file/Dark-Souls-3/vordt-enemies-dark-souls-3-wiki-guide.jpg"
+    },{
+        "id": 3,
+        "name":    "Curse-Rotted Greatwood",
+        "weak":    "Slash, Thrust, Fire, Sacs",
+        "resist" : "none",
+        "immune" : "Poison, Toxic, Bleed, Frost",
+        "parry" :  "no",
+        "dmg" :    "physical",
+        "health":  "5405",
+        "summs":   "none",
+        "require": "no",
+        "image":   "https://darksouls3.wiki.fextralife.com/file/Dark-Souls-3/curse-rotted-greatwood-enemies-dark-souls-3-wiki-guide.jpg"
+    },
+    {
+        "id": 4,
+        "name":    "Crystal Sage",
+        "weak":    "Slash, Thrust, Strike, Poison, Toxic",
+        "resist" : "Magic",
+        "immune" : "None",
+        "parry" :  "yes",
+        "dmg" :    "physical, magic",
+        "health":  "2723",
+        "summs":   "Eygon of Carim",
+        "require": "yes",
+        "image":   "https://darksouls3.wiki.fextralife.com/file/Dark-Souls-3/crystal-sage-enemy-dark-souls-3-wiki-guide.jpg"
+    },
+    {
+        "id": 5,
+        "name":    "Abyss Watchers",
+        "weak":    "Lightning, Backstab",
+        "resist" : "Dark, Bleed",
+        "immune" : "Poison, Toxic",
+        "parry" :  "yes",
+        "dmg" :    "physical, fire",
+        "health":  "1548",
+        "summs":   "Sirris of the Sunless Realms, Londor Pale Shade, Black Hand Gotthard",
+        "require": "yes",
+        "image":   "https://darksouls3.wiki.fextralife.com/file/Dark-Souls-3/abyss-watcher-enemies-dark-souls-3-wiki-guide.jpg"
+    }
+]

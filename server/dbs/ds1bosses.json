@@ -1,0 +1,66 @@
+[
+    {
+        "id": 1,
+        "name":    "Asylum Demon",
+        "weak":    "fire,bleed,slash,black knight weapons",
+        "resist" : "none",
+        "immune" : "none",
+        "parry" :  "no",
+        "dmg" :    "physical",
+        "health":  "825",
+        "summs":   "none",
+        "require": "yes",
+        "image":   "https://darksouls.wiki.fextralife.com/file/Dark-Souls/Boss_0036_Asylum%20Demon.jpg"
+    },
+    {
+        "id": 2,
+        "name":    "Bell Gargoyle",
+        "weak":    "lighting",
+        "resist" : "none",
+        "immune" : "none",
+        "parry" :  "no",
+        "dmg" :    "physical, lightning",
+        "health":  "1,000 / 480",
+        "summs":   "Solaire, Lautrec",
+        "require": "yes",
+        "image":   "https://darksouls.wiki.fextralife.com/file/Dark-Souls/Boss_0035_Bell%20Gargoyle.jpg"
+    },{
+        "id": 3,
+        "name":    "Capra Demon",
+        "weak":    "fire,toxic",
+        "resist" : "none",
+        "immune" : "none",
+        "parry" :  "no",
+        "dmg" :    "physical",
+        "health":  "1,176",
+        "summs":   "none",
+        "require": "yes",
+        "image":   "https://darksouls.wiki.fextralife.com/file/Dark-Souls/Boss_0034_Capra%20Demon.jpg"
+    },
+    {
+        "id": 4,
+        "name":    "Ceaseless Discharge",
+        "weak":    "cheese",
+        "resist" : "none",
+        "immune" : "none",
+        "parry" :  "no",
+        "dmg" :    "physical, fire",
+        "health":  "4,200",
+        "summs":   "none",
+        "require": "yes",
+        "image":   "https://darksouls.wiki.fextralife.com/file/Dark-Souls/Ceaseless_Discharge_Extra.jpg"
+    },
+    {
+        "id": 5,
+        "name":    "Chaos Witch Quelaag",
+        "weak":    "lighting",
+        "resist" : "none",
+        "immune" : "fire",
+        "parry" :  "no",
+        "dmg" :    "physical, fire",
+        "health":  "3,139",
+        "summs":   "Maneater Mildred",
+        "require": "yes",
+        "image":   "https://darksouls.wiki.fextralife.com/file/Dark-Souls/Boss_0031_Chaos%20Witch%20Quelaag.jpg"
+    }
+]
