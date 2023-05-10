@@ -79,25 +79,6 @@ const allBoss = evt =>{
       request.send()
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 const createBossCard = (name,desc,location,region,health,img) =>{
 
 
@@ -145,12 +126,6 @@ const createBossCard = (name,desc,location,region,health,img) =>{
 const clearFunc = evt =>{
     bossBox.innerHTML = '<h2 id = "bossName">Please enter a boss name or select random </h2>';
 }
-
-
-
-
-
-
 allBtn.addEventListener('click', allBoss)
 randBtn.addEventListener('click', randBoss)
 clearBtn.addEventListener('click', clearFunc)
