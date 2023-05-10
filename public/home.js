@@ -37,6 +37,7 @@ const rb1 = evt =>{
         const bossList = response.data
         let tempArr = bossList
         bossBox.innerHTML = '';
+        bossBox.innerHTML = '<h2 class = "gameName">Dark souls 1</h2>';
             let temp = tempArr[randNum]
             createBossCard(temp.name,temp.weak,temp.resist,temp.immune,temp.parry,temp.dmg,temp.health,temp.summs,temp.require,temp.image)
         
@@ -89,6 +90,7 @@ const rb2 = evt =>{
         const bossList = response.data
         let tempArr = bossList
         bossBox.innerHTML = '';
+        bossBox.innerHTML = '<h2 class = "gameName">Dark souls 2</h2>';
             let temp = tempArr[randNum]
             createBossCard(temp.name,temp.weak,temp.resist,temp.immune,temp.parry,temp.dmg,temp.health,temp.summs,temp.require,temp.image)
         
@@ -142,6 +144,7 @@ const rb3 = evt =>{
         const bossList = response.data
         let tempArr = bossList
         bossBox.innerHTML = '';
+        bossBox.innerHTML = '<h2 class = "gameName">Dark souls 3</h2>';
             let temp = tempArr[randNum]
             createBossCard(temp.name,temp.weak,temp.resist,temp.immune,temp.parry,temp.dmg,temp.health,temp.summs,temp.require,temp.image)
         
@@ -265,6 +268,8 @@ const randBoss = evt =>{
         // console.log(tempArr)
         console.log(tempArr.length)
         bossBox.innerHTML = '';
+        bossBox.innerHTML = '<h2 class = "gameName">Elden Ring</h2>';
+
             let temp = tempArr[randNum]
             createBossCardER(temp.name,temp.description,temp.location,temp.region,temp.healthPoints,temp.image)
         
@@ -335,12 +340,6 @@ const createBossCardER = (name,desc,location,region,health,img) =>{
 
 }
 //============================
-
-
-
-
-
-
 const allrandBoss = evt =>{
     dsNum = Math.floor(Math.random()*3)
     cycleNum = Math.floor(Math.random()*2)
@@ -374,5 +373,3 @@ const allAllBoss = evt =>{
 randBtn.addEventListener('click', allrandBoss)
 clearBtn.addEventListener('click', clearFunc)
 allBtn.addEventListener('click', allAllBoss)
-
-

@@ -66,13 +66,17 @@ aside{
     font-size: 25px;
     padding: 10px;
 }
+h2{
+    color: slategray;
+}
 #gameName{
     font-size: 15px;
     padding: 10px;
 }
-h2{
-    color: antiquewhite;
-}
 img{
     opacity: 1;
+}
+.gameName{
+    font-size: 25px;
+    padding: 10px;
 }
