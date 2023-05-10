@@ -38,17 +38,17 @@ const searchBoss = evt =>{
 
 const randBoss = evt =>{
     let randNum = Math.floor(Math.random()*5)
-    request.open('GET',`/ds3/randbosses`,true)
-    request.onload = function () {
+    axios.get(`/ds3/randbosses`)
+        .then (evt => {
         const bossList = JSON.parse(this.response)
         let tempArr = bossList
         bossBox.innerHTML = '';
             let temp = tempArr[randNum]
             createBossCard(temp.name,temp.weak,temp.resist,temp.immune,temp.parry,temp.dmg,temp.health,temp.summs,temp.require,temp.image)
         
-    }
+    })
     
-      request.send()
+
 }
 
 const allBoss = evt =>{
