@@ -18,7 +18,7 @@ app.get('/ds3', getds3)
 app.get('/ds4', getds4)
 
 app.get('/ds1/bosses', pullAllDB1)
-app.get('/ds1-randbosses', pullAllDB1)
+app.get('/ds1/randbosses', pullAllDB1)
 app.get('/ds1/bosses/name/:', pullDB1)
 
 app.get('/ds2/bosses', pullAllDB2)
