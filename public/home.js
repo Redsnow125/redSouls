@@ -193,7 +193,7 @@ const createBossCard = (name,weak,resist,immune,parry,dmg,health,sums,require,im
     let  sumsP = document.createElement('p');
     let  requireP = document.createElement('p');
 
-    bossPic.innerHTML = `<img src="${image}" alt="Boss Picture" style="width: 800px; height: 500px;">`
+    bossPic.innerHTML = `<img src="${image}" alt="Boss Picture" style="width: 100%; height: 100%;">`
     
     nameP.textContent = name;
     bossCard.appendChild(nameP)
@@ -319,7 +319,7 @@ const createBossCardER = (name,desc,location,region,health,img) =>{
     let  regionP = document.createElement('p');
     let  healthP = document.createElement('p');
     // console.log(img)
-    bossPic.innerHTML = `<img src="${img}" alt="Boss Picture" style="width: 800px; height: 500px;">`
+    bossPic.innerHTML = `<img src="${img}" alt="Boss Picture" style="width: 100%; height: 100%;">`
     
     nameP.textContent = name;
     bossCard.appendChild(nameP)

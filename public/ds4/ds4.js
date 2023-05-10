@@ -94,7 +94,7 @@ const createBossCard = (name,desc,location,region,health,img) =>{
     let  regionP = document.createElement('p');
     let  healthP = document.createElement('p');
     // console.log(img)
-    bossPic.innerHTML = `<img src="${img}" alt="Boss Picture" style="width: 800px; height: 500px;">`
+    bossPic.innerHTML = `<img src="${img}" alt="Boss Picture" style="width: 100%; height: 100%;">`
     
     nameP.textContent = name;
     bossCard.appendChild(nameP)
