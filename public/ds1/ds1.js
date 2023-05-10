@@ -41,7 +41,7 @@ const randBoss = evt =>{
             let temp = tempArr[randNum]
             createBossCard(temp.name,temp.weak,temp.resist,temp.immune,temp.parry,temp.dmg,temp.health,temp.summs,temp.require,temp.image)
         
-    })
+    }).catch(err => console.log(err))
     
 
 }
