@@ -6,7 +6,7 @@ const clearBtn = document.querySelector("#Clear")
 const allBtn = document.querySelector("#all")
 
 //===========ds1===============
- const sb1 = evt =>{
+const sb1 = evt =>{
     evt.preventDefault()
     const bossInput = document.querySelector('#bossSearch')
     let input = bossInput.value
@@ -15,55 +15,50 @@ const allBtn = document.querySelector("#all")
     console.log(input)
     
 
-    request.open('GET',`/ds1/bosses/name/:${input}`,true)
-    request.onload = function () {
-        const bossList = JSON.parse(this.response)
-        console.log('in onload')
-        console.log(bossList)
-        let tempArr = bossList
-        console.log(tempArr.length)
-        bossBox.innerHTML = '';
-        for(i = 0; i < tempArr.length; i++){
-            let temp = tempArr[i]
-            createBossCard(temp.name,temp.weak,temp.resist,temp.immune,temp.parry,temp.dmg,temp.health,temp.summs,temp.require,temp.image)
-        }
-    }
-    
-      request.send()
-    
+    axios.get(`/ds1/bosses/name/:${input}`)
+        .then(res =>{
+            const bossList = res.data
+            console.log('in onload')
+            console.log(bossList)
+            let tempArr = bossList
+            console.log(tempArr.length)
+            bossBox.innerHTML = '';
+            for(i = 0; i < tempArr.length; i++){
+                let temp = tempArr[i]
+                createBossCard(temp.name,temp.weak,temp.resist,temp.immune,temp.parry,temp.dmg,temp.health,temp.summs,temp.require,temp.image)
+            }
+    })
 }
 
- const rb1 = evt =>{
+const rb1 = evt =>{
     let randNum = Math.floor(Math.random()*5)
-    request.open('GET',`/ds1/randbosses`,true)
-    request.onload = function () {
-        const bossList = JSON.parse(this.response)
+    axios.get(`/ds1/randbosses`)
+        .then ( response => {
+        const bossList = response.data
         let tempArr = bossList
         bossBox.innerHTML = '';
-        bossBox.innerHTML = '<h1>Darksouls 1</h1>'
             let temp = tempArr[randNum]
             createBossCard(temp.name,temp.weak,temp.resist,temp.immune,temp.parry,temp.dmg,temp.health,temp.summs,temp.require,temp.image)
         
-    }
+    })
     
-      request.send()
+
 }
 
- const ab1 = evt =>{
-    request.open('GET',`/ds1/bosses`,true)
-    request.onload = function () {
-        const bossList = JSON.parse(this.response)
-        let tempArr = bossList
+const ab1 = evt =>{
+    axios.get(`/ds1/randbosses`)
+        .then ( response => {
+            const bossList = response.data
+            let tempArr = bossList
+        bossBox.innerHTML = '';
         for(i = 0; i < tempArr.length; i++){
             let temp = tempArr[i]
             createBossCard(temp.name,temp.weak,temp.resist,temp.immune,temp.parry,temp.dmg,temp.health,temp.summs,temp.require,temp.image)
         }
-    }
-    
-      request.send()
+    })
 }
 //===========ds2===============
- const sb2 = evt =>{
+const sb2 = evt =>{
     evt.preventDefault()
     const bossInput = document.querySelector('#bossSearch')
     let input = bossInput.value
@@ -72,55 +67,51 @@ const allBtn = document.querySelector("#all")
     console.log(input)
     
 
-    request.open('GET',`/ds2/bosses/name/:${input}`,true)
-    request.onload = function () {
-        const bossList = JSON.parse(this.response)
-        console.log('in onload')
-        console.log(bossList)
-        let tempArr = bossList
-        console.log(tempArr.length)
-        bossBox.innerHTML = '';
-        for(i = 0; i < tempArr.length; i++){
-            let temp = tempArr[i]
-            createBossCard(temp.name,temp.weak,temp.resist,temp.immune,temp.parry,temp.dmg,temp.health,temp.summs,temp.require,temp.image)
-        }
-    }
-    
-      request.send()
-    
+    axios.get(`/ds2/bosses/name/:${input}`)
+        .then(res =>{
+            const bossList = res.data
+            console.log('in onload')
+            console.log(bossList)
+            let tempArr = bossList
+            console.log(tempArr.length)
+            bossBox.innerHTML = '';
+            for(i = 0; i < tempArr.length; i++){
+                let temp = tempArr[i]
+                createBossCard(temp.name,temp.weak,temp.resist,temp.immune,temp.parry,temp.dmg,temp.health,temp.summs,temp.require,temp.image)
+            }
+    })
 }
 
- const rb2 = evt =>{
+const rb2 = evt =>{
     let randNum = Math.floor(Math.random()*5)
-    request.open('GET',`/ds2/randbosses`,true)
-    request.onload = function () {
-        const bossList = JSON.parse(this.response)
+    axios.get(`/ds2/randbosses`)
+        .then ( response => {
+        const bossList = response.data
         let tempArr = bossList
         bossBox.innerHTML = '';
             let temp = tempArr[randNum]
             createBossCard(temp.name,temp.weak,temp.resist,temp.immune,temp.parry,temp.dmg,temp.health,temp.summs,temp.require,temp.image)
         
-    }
+    })
     
-      request.send()
+
 }
 
- const ab2 = evt =>{
-    request.open('GET',`/ds2/bosses`,true)
-    request.onload = function () {
-        const bossList = JSON.parse(this.response)
-        let tempArr = bossList
+const ab2 = evt =>{
+    axios.get(`/ds2/randbosses`)
+        .then ( response => {
+            const bossList = response.data
+            let tempArr = bossList
+        bossBox.innerHTML = '';
         for(i = 0; i < tempArr.length; i++){
             let temp = tempArr[i]
             createBossCard(temp.name,temp.weak,temp.resist,temp.immune,temp.parry,temp.dmg,temp.health,temp.summs,temp.require,temp.image)
         }
-    }
-    
-      request.send()
+    })
 }
 //===========ds3===============
 
- const sb3 = evt =>{
+const sb3 = evt =>{
     evt.preventDefault()
     const bossInput = document.querySelector('#bossSearch')
     let input = bossInput.value
@@ -129,51 +120,47 @@ const allBtn = document.querySelector("#all")
     console.log(input)
     
 
-    request.open('GET',`/ds3/bosses/name/:${input}`,true)
-    request.onload = function () {
-        const bossList = JSON.parse(this.response)
-        console.log('in onload')
-        console.log(bossList)
-        let tempArr = bossList
-        console.log(tempArr.length)
-        bossBox.innerHTML = '';
-        for(i = 0; i < tempArr.length; i++){
-            let temp = tempArr[i]
-            createBossCard(temp.name,temp.weak,temp.resist,temp.immune,temp.parry,temp.dmg,temp.health,temp.summs,temp.require,temp.image)
-        }
-    }
-    
-      request.send()
-    
+    axios.get(`/ds3/bosses/name/:${input}`)
+        .then(res =>{
+            const bossList = res.data
+            console.log('in onload')
+            console.log(bossList)
+            let tempArr = bossList
+            console.log(tempArr.length)
+            bossBox.innerHTML = '';
+            for(i = 0; i < tempArr.length; i++){
+                let temp = tempArr[i]
+                createBossCard(temp.name,temp.weak,temp.resist,temp.immune,temp.parry,temp.dmg,temp.health,temp.summs,temp.require,temp.image)
+            }
+    })
 }
 
- const rb3 = evt =>{
+const rb3 = evt =>{
     let randNum = Math.floor(Math.random()*5)
-    request.open('GET',`/ds3/randbosses`,true)
-    request.onload = function () {
-        const bossList = JSON.parse(this.response)
+    axios.get(`/ds3/randbosses`)
+        .then ( response => {
+        const bossList = response.data
         let tempArr = bossList
         bossBox.innerHTML = '';
             let temp = tempArr[randNum]
             createBossCard(temp.name,temp.weak,temp.resist,temp.immune,temp.parry,temp.dmg,temp.health,temp.summs,temp.require,temp.image)
         
-    }
+    })
     
-      request.send()
+
 }
 
- const ab3 = evt =>{
-    request.open('GET',`/ds3/bosses`,true)
-    request.onload = function () {
-        const bossList = JSON.parse(this.response)
-        let tempArr = bossList
+const ab3 = evt =>{
+    axios.get(`/ds3/randbosses`)
+        .then ( response => {
+            const bossList = response.data
+            let tempArr = bossList
+        bossBox.innerHTML = '';
         for(i = 0; i < tempArr.length; i++){
             let temp = tempArr[i]
             createBossCard(temp.name,temp.weak,temp.resist,temp.immune,temp.parry,temp.dmg,temp.health,temp.summs,temp.require,temp.image)
         }
-    }
-    
-      request.send()
+    })
 }
 //=====Universal==============
 const createBossCard = (name,weak,resist,immune,parry,dmg,health,sums,require,image) =>{
