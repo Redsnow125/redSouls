@@ -17,7 +17,7 @@ const searchBoss = evt =>{
     console.log(bossInput)
     console.log(input)
 
-    request.open('GET',`https://eldenring.fanapis.com/api/bosses?name=${input}?limit=150`,true)
+    request.open('GET',`https://eldenring.fanapis.com/api/bosses?name=${input}`,true)
     request.onload = function () {
         const bossList = JSON.parse(this.response)
         console.log('in onload')
@@ -38,12 +38,11 @@ const searchBoss = evt =>{
 
 const randBoss = evt =>{
     console.log('in rand')
-    let randNum = Math.random()* 100
-    randNum = randNum.toFixed(0)
+    let randNum = Math.floor(Math.random()* 106)
 
     console.log(randNum)
 
-    request.open('GET',`https://eldenring.fanapis.com/api/bosses?limit=150`,true)
+    request.open('GET',`https://eldenring.fanapis.com/api/bosses?limit=106`,true)
     request.onload = function () {
         const bossList = JSON.parse(this.response)
         console.log('in onload')
