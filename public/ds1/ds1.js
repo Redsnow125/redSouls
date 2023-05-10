@@ -33,7 +33,7 @@ const searchBoss = evt =>{
 
 const randBoss = evt =>{
     let randNum = Math.floor(Math.random()*5)
-    axios.get(`/ds1/randbosses`)
+    axios.get(`/ds1-randbosses`)
         .then ( response => {
         const bossList = response.data
         let tempArr = bossList
